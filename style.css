@@ -20,7 +20,7 @@
     --footer-bg: #222;
 }
 
-/* --- ตั้งค่าพื้นฐาน --- */
+/* --- เธ•เธฑเนเธเธเนเธฒเธเธทเนเธเธเธฒเธ --- */
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
@@ -53,7 +53,7 @@ header h1 {
     cursor: pointer;
 }
 
-/* --- กล่องแบบฟอร์ม --- */
+/* --- เธเธฅเนเธญเธเนเธเธเธเธญเธฃเนเธก --- */
 .container {
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ header h1 {
     transition: 0.3s;
 }
 
-/* --- ฟอร์ม --- */
+/* --- เธเธญเธฃเนเธก --- */
 label {
     display: block;
     text-align: left;
