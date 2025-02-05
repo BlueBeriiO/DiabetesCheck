@@ -3,40 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คำนวณความเสี่ยงโรคเบาหวาน</title>
+    <title>Diabetes Risk Assessment</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">HealthCheck</div>
+        <ul class="nav-links">
+            <li><a href="#">หน้าหลัก</a></li>
+            <li><a href="#">เกี่ยวกับเรา</a></li>
+            <li><a href="#">บริการ</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+            <li>
+                <button id="theme-toggle">🌙 Dark Mode</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <header>
+        <h1>🩺 แบบประเมินความเสี่ยงโรคเบาหวาน</h1>
+        <p>กรุณากรอกข้อมูลของคุณเพื่อประเมินความเสี่ยง</p>
+    </header>
+
     <div class="container">
-        <h2>แบบประเมินความเสี่ยงโรคเบาหวาน</h2>
-        <form id="diabetes-form">
-            <label for="age">อายุ (ปี):</label>
-            <input type="number" id="age" required>
+        <div class="card">
+            <h2>กรอกข้อมูลของคุณ</h2>
+            <form id="diabetes-form">
+                <label for="age">👤 อายุ (ปี):</label>
+                <input type="number" id="age" placeholder="เช่น 30" required>
 
-            <label for="bmi">ค่า BMI:</label>
-            <input type="number" id="bmi" step="0.1" required>
+                <label for="bmi">⚖ ค่า BMI:</label>
+                <input type="number" id="bmi" step="0.1" placeholder="เช่น 25.4" required>
 
-            <label for="blood_sugar">ระดับน้ำตาลในเลือด (mg/dL):</label>
-            <input type="number" id="blood_sugar" required>
+                <label for="blood_sugar">🩸 ระดับน้ำตาลในเลือด (mg/dL):</label>
+                <input type="number" id="blood_sugar" placeholder="เช่น 110" required>
 
-            <label>มีประวัติครอบครัวเป็นเบาหวานหรือไม่?</label>
-            <select id="family_history">
-                <option value="yes">ใช่</option>
-                <option value="no">ไม่</option>
-            </select>
+                <label>🏠 มีประวัติครอบครัวเป็นเบาหวานหรือไม่?</label>
+                <select id="family_history">
+                    <option value="yes">ใช่</option>
+                    <option value="no">ไม่</option>
+                </select>
 
-            <label>ออกกำลังกายเป็นประจำหรือไม่?</label>
-            <select id="physical_activity">
-                <option value="yes">ใช่</option>
-                <option value="no">ไม่</option>
-            </select>
+                <label>🏃‍♂️ ออกกำลังกายเป็นประจำหรือไม่?</label>
+                <select id="physical_activity">
+                    <option value="yes">ใช่</option>
+                    <option value="no">ไม่</option>
+                </select>
 
-            <button type="button" onclick="calculateRisk()">คำนวณความเสี่ยง</button>
-        </form>
+                <button type="button" onclick="calculateRisk()">🚀 คำนวณความเสี่ยง</button>
+            </form>
 
-        <div id="result"></div>
+            <div id="result"></div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 HealthCheck | Powered by AI</p>
+    </footer>
+
 </body>
 </html>
