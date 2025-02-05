@@ -5,12 +5,8 @@ function calculateRisk() {
     let familyHistory = document.getElementById("family_history").value === "yes";
     let physicalActivity = document.getElementById("physical_activity").value === "yes";
 
-    let resultBox = document.getElementById("result");
-
-    // เช็กว่าผู้ใช้กรอกข้อมูลครบหรือไม่
     if (isNaN(age) || isNaN(bmi) || isNaN(bloodSugar)) {
-        resultBox.innerHTML = "<span style='color: red;'>⚠ กรุณากรอกข้อมูลให้ครบถ้วน</span>";
-        resultBox.classList.remove("show-result");
+        document.getElementById("result").innerHTML = "<span style='color: red;'>กรุณากรอกข้อมูลให้ครบถ้วน</span>";
         return;
     }
 
@@ -43,21 +39,19 @@ function calculateRisk() {
     }
 
     let resultText = "";
-    let resultColor = "";
-
     if (riskScore >= 6) {
-        resultText = "❗ ความเสี่ยงสูง! ควรพบแพทย์เพื่อรับการตรวจเพิ่มเติม";
-        resultColor = "red";
+        resultText = "<span style='color: red;'>ความเสี่ยงสูง! ควรพบแพทย์เพื่อรับการตรวจเพิ่มเติม</span>";
     } else if (riskScore >= 3) {
-        resultText = "⚠ ความเสี่ยงปานกลาง ควรปรับพฤติกรรมการใช้ชีวิต";
-        resultColor = "orange";
+        resultText = "<span style='color: orange;'>ความเสี่ยงปานกลาง ควรปรับพฤติกรรมการใช้ชีวิต</span>";
     } else {
-        resultText = "✅ ความเสี่ยงต่ำ แต่ควรรักษาสุขภาพให้ดี";
-        resultColor = "green";
+        resultText = "<span style='color: green;'>ความเสี่ยงต่ำ แต่ควรรักษาสุขภาพให้ดี</span>";
     }
 
-    resultBox.innerHTML = resultText;
-    resultBox.style.color = "white";
-    resultBox.style.background = resultColor;
-    resultBox.classList.add("show-result");
+    document.getElementById("result").innerHTML = resultText;
 }
+
+// Toggle Dark Mode
+document.getElementById("toggle-theme").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+    this.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+});
