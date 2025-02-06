@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiabetesCheck | ผลการประเมิน</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>ผลการประเมินโรคเบาหวาน</h1>
+    </header>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>อายุ</th>
+                    <th>BMI</th>
+                    <th>ระดับน้ำตาล (mg/dL)</th>
+                    <th>ประวัติครอบครัว</th>
+                    <th>ออกกำลังกาย</th>
+                    <th>ความเสี่ยง</th>
+                </tr>
+            </thead>
+            <tbody id="result-body">
+                <!-- ข้อมูลจะถูกแสดงที่นี่ -->
+            </tbody>
+        </table>
+
+        <button onclick="clearResult()">🗑 ล้างข้อมูล</button>
+        <a href="index.html" class="btn">🔙 กลับไปแบบประเมิน</a>
+    </div>
+</body>
+</html>

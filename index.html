@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiabetesCheck | ระบบประเมินโรคเบาหวาน</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DiabetesCheck</h1>
+    </header>
+    <div class="container">
+        <h2>ยินดีต้อนรับสู่ระบบประเมินโรคเบาหวาน</h2>
+        <p>กดปุ่มด้านล่างเพื่อเริ่มทำแบบประเมิน</p>
+        <a href="assessment.html" class="btn">เริ่มทำแบบประเมิน</a>
+    </div>
+</body>
+</html>
+
+<script src="script.js" defer></script>
+
+<div class="faq"></div>
+    <h3>คำถามที่พบบ่อย</h3>
+    <div class="faq-item">
+        <h4 onclick="toggleAnswer('answer1')">โรคเบาหวานคืออะไร?</h4>
+        <p id="answer1" class="answer">โรคเบาหวานคือภาวะที่ระดับน้ำตาลในเลือดสูงเกินไป...</p>
+    </div>
+    <div class="faq-item">
+        <h4 onclick="toggleAnswer('answer2')">การคำนวณค่า BMI ทำยังไง?</h4>
+        <p id="answer2" class="answer">ค่า BMI คำนวณจากน้ำหนัก (กิโลกรัม) หารด้วยความสูง (เมตร) ยกกำลังสอง...</p>
+    </div>
+    <div class="faq-item">
+        <h4 onclick="toggleAnswer('answer3')">การคำนวณความเสี่ยงเบาหวานจากข้อมูลอะไรบ้าง?</h4>
+        <p id="answer3" class="answer">การคำนวณความเสี่ยงเบาหวานจะพิจารณาจากอายุ, ค่า BMI, ระดับน้ำตาลในเลือด...</p>
+    </div>
+</div>
